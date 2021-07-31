@@ -1,0 +1,12 @@
+.WrapperMovie {
+    display:flex
+}
+.WrapperMovie>img {
+    margin-right: 20px;
+    width:200px;
+    height: auto;
+}
+
+.Cast{
+    margin-right: 20px;
+}
