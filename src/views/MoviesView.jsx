@@ -13,7 +13,9 @@ function MoviesView() {
   );
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchMovies, setSearchMovies] = useState(moviesInLocalStorageHistory);
+  const [searchMovies, setSearchMovies] = useState(
+    moviesInLocalStorageHistory || []
+  );
 
   const handleSearchQuery = (e) => {
     setSearchQuery(e.target.value.toLowerCase());
