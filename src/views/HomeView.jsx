@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import getMoviesAPI from "../services/getMoviesAPI";
 import MoviesList from "../Components/MoviesList";
+import clearMoviesFromLocalStorage from "../services/clearMoviesFromLocalStorage";
 
 function Homeview() {
-  const [movies, setMovies] = useState([]);
+  clearMoviesFromLocalStorage();
 
+  const [movies, setMovies] = useState([]);
   useEffect(() => {
     async function getFetchMovies() {
       try {
